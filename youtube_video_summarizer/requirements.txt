@@ -1,0 +1,7 @@
+langchain
+google-generativeai
+streamlit
+tiktoken 
+chromadb 
+pytube
+youtube-transcript-api

@@ -1,0 +1,6 @@
+langchain
+google-generativeai
+streamlit
+google-cloud-translate
+docx2txt
+
