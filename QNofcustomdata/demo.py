@@ -3,7 +3,7 @@ import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAI
 
 # Configure the Google Generative AI API with your API key
-api_key = "AIzaSyBK6Cdw1szVPjWK-57uDtOTR1nNm6Y6v38"
+api_key = ""
 
 # Create a GoogleGenerativeAI LLM instance
 llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=api_key)

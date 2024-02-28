@@ -10,15 +10,16 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
 from langchain_core.documents import Document
 import os
+import google.generativeai as genai
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_answer(question, uploaded_file):
     if uploaded_file is None:
         st.error("Please upload a document first.")
         return ""
 
-
-    api_key = "AIzaSyBK6Cdw1szVPjWK-57uDtOTR1nNm6Y6v38"
-    llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=api_key)
+    llm = GoogleGenerativeAI(model="gemini-pro")
 
     with open(uploaded_file.name, "wb") as f:
         f.write(uploaded_file.getbuffer())
